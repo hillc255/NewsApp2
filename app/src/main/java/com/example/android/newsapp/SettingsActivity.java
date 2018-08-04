@@ -4,10 +4,11 @@ import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.preference.ListPreference;
 import android.preference.Preference;
-import android.preference.Preference.OnPreferenceChangeListener;
 import android.preference.PreferenceFragment;
 import android.preference.PreferenceManager;
 import android.support.v7.app.AppCompatActivity;
+
+// Based on ud843-Quake Report - Udemy Android Basics Application
 
 //Preference settings: class for all preference settings
 public class SettingsActivity extends AppCompatActivity {
@@ -18,6 +19,7 @@ public class SettingsActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.settings_activity);
     }
+
     //Preference fragment setup
     public static class NewsAppPreferenceFragment extends PreferenceFragment
             implements Preference.OnPreferenceChangeListener {

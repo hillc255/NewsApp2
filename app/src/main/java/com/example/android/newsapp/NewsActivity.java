@@ -31,13 +31,11 @@ public class NewsActivity extends AppCompatActivity
     private static final String LOG_TAG = NewsActivity.class.getName();
 
     /**
-     * URL for News app data from the The Guardian
+     * URL for News app data from the The Guardian - URI will break down url
      */
     private static final String NEWS_REQUEST_URL =
             "https://content.guardianapis.com/search";
-           // "https://content.guardianapis.com/search?q=science%20AND%20tech&from-date=2017-01-01&api-key=1d89e06a-a8dc-44de-8eef-b8ef6db55b08&order-by=oldest&show-tags=contributor&show-fields=thumbnail";
-            //"https://content.guardianapis.com/search?q=education%20AND%20science%20AND%20tech%20AND%20cities&from-date=2016-01-01&api-key=1d89e06a-a8dc-44de-8eef-b8ef6db55b08&show-tags=contributor&show-fields=thumbnail";
-           //https://open-platform.theguardian.com/documentation/
+
     /**
      * Constant value for the news loader ID. We can choose any integer.
      * This really only comes into play if you're using multiple loaders.
@@ -60,7 +58,7 @@ public class NewsActivity extends AppCompatActivity
         setContentView(R.layout.news_activity);
 
         // Find a reference to the {@link ListView} in the layout
-        ListView newsListView = (ListView) findViewById(R.id.list);
+        ListView newsListView = findViewById(R.id.list);
 
         mEmptyStateTextView = findViewById(R.id.empty_view);
         newsListView.setEmptyView(mEmptyStateTextView);
@@ -129,18 +127,7 @@ public class NewsActivity extends AppCompatActivity
 
         SharedPreferences sharedPrefs = PreferenceManager.getDefaultSharedPreferences(this);
 
-        // "https://content.guardianapis.com/search
-        // ?
-        // q=tech&
-        // from-date=2017-01-01&
-        // api-key=
-        // 1d89e06a-a8dc-44de-8eef-b8ef6db55b08&
-        // order-by=oldest&
-        // show-tags=contributor&
-        // show-fields=
-        // thumbnail";
-
-        //getString retrieves String value from preferences - 2nd parameter default value
+        //getString retrieves String value from preferences
         String fromDate = sharedPrefs.getString(
                 getString(R.string.settings_begin_date_key),
                 getString(R.string.settings_begin_date_default));
@@ -153,10 +140,8 @@ public class NewsActivity extends AppCompatActivity
         Uri.Builder uriBuilder = baseUri.buildUpon();
 
         uriBuilder.appendQueryParameter("q", "tech");
-//        uriBuilder.appendQueryParameter("from-date", "2015-01-01");
         uriBuilder.appendQueryParameter("from-date", fromDate);
         uriBuilder.appendQueryParameter("api-key", "1d89e06a-a8dc-44de-8eef-b8ef6db55b08");
-//        uriBuilder.appendQueryParameter("order-by", "oldest");
         uriBuilder.appendQueryParameter("order-by", orderBy);
         uriBuilder.appendQueryParameter("show-tags", "contributor");
         uriBuilder.appendQueryParameter("show-fields", "thumbnail");
@@ -202,9 +187,9 @@ public class NewsActivity extends AppCompatActivity
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
 
-        //determine which item is selected from menu
+        //Determine which item is selected from menu
         int id = item.getItemId();
-        //match id with known menu items - open settings activity via intent
+        //Match id with known menu items - open settings activity via intent
         if (id == R.id.action_settings) {
             Intent settingsIntent = new Intent(this, SettingsActivity.class);
             startActivity(settingsIntent);

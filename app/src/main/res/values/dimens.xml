@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-
     <!-- News activity dimens -->
     <dimen name="news_activity_divider">0dp</dimen>
 
@@ -13,5 +12,4 @@
     <dimen name="linear_layout_start">16dp</dimen>
     <dimen name="small_textsize">12sp</dimen>
     <dimen name="large_textsize">14sp</dimen>
-
 </resources>

@@ -55,10 +55,8 @@ public final class QueryUtils {
             Log.e(LOG_TAG, "Problem making the HTTP request.", e);
         }
 
-        List<News> newslist = extractFeatureFromJson(jsonResponse);
-
-        // Return the list of {@link News}s
-        return newslist;
+        //Combined "List<News> newslist = extractFeatureFromJson(jsonResponse);" with "return newslist;"
+        return extractFeatureFromJson(jsonResponse);
     }
 
     /**
@@ -188,9 +186,8 @@ public final class QueryUtils {
                 }
 
                 // Extract the thumbnail associated with news item in "field" object
-                String imageUrl = null;
                 JSONObject imageUrlObject = currentNews.getJSONObject("fields");
-                imageUrl = imageUrlObject.getString("thumbnail");
+                String imageUrl = imageUrlObject.getString("thumbnail");
 
                 // Extract the value for the key "webUrl"
                 String url = currentNews.getString("webUrl");

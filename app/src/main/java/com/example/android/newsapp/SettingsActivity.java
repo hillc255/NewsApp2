@@ -9,40 +9,42 @@ import android.preference.PreferenceFragment;
 import android.preference.PreferenceManager;
 import android.support.v7.app.AppCompatActivity;
 
-//Prefrences settings
+//Preference settings: class for all preference settings
 public class SettingsActivity extends AppCompatActivity {
 
+    //Layout for the preference display
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.settings_activity);
     }
-    //SETTINGS:  classes implement this interface setup to listen for any Preferene change
-    //made by user
+    //Preference fragment setup
     public static class NewsAppPreferenceFragment extends PreferenceFragment
             implements Preference.OnPreferenceChangeListener {
 
-        //SETTINGS: set up preferences by overriding
+        //Set up preferences and add them from the settings_main
         @Override
         public void onCreate(Bundle savedInstanceState) {
             super.onCreate(savedInstanceState);
             addPreferencesFromResource(R.xml.settings_main);
 
-            //editing settings
-//            Preference minMagnitude = findPreference(getString(R.string.settings_min_magnitude_key));
-//            bindPreferenceSummaryToValue(minMagnitude);
+            //Edit preference for article begin date
+            Preference fromDate = findPreference(getString(R.string.settings_begin_date_key));
+            bindPreferenceSummaryToValue(fromDate);
 
-            //Listpreferencesthis was previously commented out
+            //Listpreference order-by options
             Preference orderBy = findPreference(getString(R.string.settings_order_by_key));
             bindPreferenceSummaryToValue(orderBy);
         }
 
+        //Get the changed preference value
         @Override
         public boolean onPreferenceChange(Preference preference, Object value) {
             String stringValue = value.toString();
             if (preference instanceof ListPreference) {
                 ListPreference listPreference = (ListPreference) preference;
                 int prefIndex = listPreference.findIndexOfValue(stringValue);
+
                 if (prefIndex >= 0) {
                     CharSequence[] labels = listPreference.getEntries();
                     preference.setSummary(labels[prefIndex]);
@@ -54,8 +56,7 @@ public class SettingsActivity extends AppCompatActivity {
         }
 
 
-        //read current value of preference stored in SharedPreferences on device
-        //display summary
+        //Read current value of preference stored in SharedPreferences on device - display summary
         private void bindPreferenceSummaryToValue(Preference preference) {
             preference.setOnPreferenceChangeListener(this);
             SharedPreferences preferences =

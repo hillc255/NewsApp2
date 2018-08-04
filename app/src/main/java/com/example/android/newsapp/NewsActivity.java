@@ -141,9 +141,9 @@ public class NewsActivity extends AppCompatActivity
         // thumbnail";
 
         //getString retrieves String value from preferences - 2nd parameter default value
-//        String minMagnitude = sharedPrefs.getString(
-//                getString(R.string.settings_min_magnitude_key),
-//                getString(R.string.settings_min_magnitude_default));
+        String fromDate = sharedPrefs.getString(
+                getString(R.string.settings_begin_date_key),
+                getString(R.string.settings_begin_date_default));
 
         String orderBy = sharedPrefs.getString(
                 getString(R.string.settings_order_by_key),
@@ -153,9 +153,11 @@ public class NewsActivity extends AppCompatActivity
         Uri.Builder uriBuilder = baseUri.buildUpon();
 
         uriBuilder.appendQueryParameter("q", "tech");
-        uriBuilder.appendQueryParameter("from-date", "2017-01-01");
+//        uriBuilder.appendQueryParameter("from-date", "2015-01-01");
+        uriBuilder.appendQueryParameter("from-date", fromDate);
         uriBuilder.appendQueryParameter("api-key", "1d89e06a-a8dc-44de-8eef-b8ef6db55b08");
-        uriBuilder.appendQueryParameter("order-by", "oldest");
+//        uriBuilder.appendQueryParameter("order-by", "oldest");
+        uriBuilder.appendQueryParameter("order-by", orderBy);
         uriBuilder.appendQueryParameter("show-tags", "contributor");
         uriBuilder.appendQueryParameter("show-fields", "thumbnail");
 

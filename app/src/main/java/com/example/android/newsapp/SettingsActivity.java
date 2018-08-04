@@ -19,7 +19,7 @@ public class SettingsActivity extends AppCompatActivity {
     }
     //SETTINGS:  classes implement this interface setup to listen for any Preferene change
     //made by user
-    public static class EarthquakePreferenceFragment extends PreferenceFragment
+    public static class NewsAppPreferenceFragment extends PreferenceFragment
             implements Preference.OnPreferenceChangeListener {
 
         //SETTINGS: set up preferences by overriding
@@ -28,10 +28,11 @@ public class SettingsActivity extends AppCompatActivity {
             super.onCreate(savedInstanceState);
             addPreferencesFromResource(R.xml.settings_main);
 
-            Preference minMagnitude = findPreference(getString(R.string.settings_min_magnitude_key));
-            bindPreferenceSummaryToValue(minMagnitude);
+            //editing settings
+//            Preference minMagnitude = findPreference(getString(R.string.settings_min_magnitude_key));
+//            bindPreferenceSummaryToValue(minMagnitude);
 
-            //this was previously commented out
+            //Listpreferencesthis was previously commented out
             Preference orderBy = findPreference(getString(R.string.settings_order_by_key));
             bindPreferenceSummaryToValue(orderBy);
         }

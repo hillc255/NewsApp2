@@ -3,12 +3,16 @@
     <resources>
 
     <string-array name="settings_order_by_labels">
+        <!-- magnitude preference -->
         <!--<item>@string/settings_order_by_magnitude_label</item>-->
+        <!-- Listpreference -->
         <item>@string/settings_order_by_most_recent_label</item>
     </string-array>
 
     <string-array name="settings_order_by_values">
+        <!-- magnitude value -->
         <!--<item>@string/settings_order_by_magnitude_value</item>-->
+        <!-- listpreference value -->
         <item>@string/settings_order_by_most_recent_value</item>
     </string-array>
 

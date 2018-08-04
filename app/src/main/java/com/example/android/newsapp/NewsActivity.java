@@ -144,7 +144,7 @@ public class NewsActivity extends AppCompatActivity
 //        String minMagnitude = sharedPrefs.getString(
 //                getString(R.string.settings_min_magnitude_key),
 //                getString(R.string.settings_min_magnitude_default));
-//
+
         String orderBy = sharedPrefs.getString(
                 getString(R.string.settings_order_by_key),
                 getString(R.string.settings_order_by_default));
@@ -161,11 +161,6 @@ public class NewsActivity extends AppCompatActivity
 
         return new NewsLoader(this, uriBuilder.toString());
     }
-//    @Override
-//    public Loader<List<News>> onCreateLoader(int i, Bundle bundle) {
-//        // Create a new loader for the given URL
-//        return new NewsLoader(this, NEWS_REQUEST_URL);
-//    }
 
     @Override
     public void onLoadFinished(Loader<List<News>> loader, List<News> newsList) {

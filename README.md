@@ -1,8 +1,8 @@
-# NewsApp
+# NewsApp2
 
 ## Synopsis
 
-Name: News App II (Including preference settings*)
+Name: News App 2 (Including preference settings*)
 
 This is an Android news application.
 

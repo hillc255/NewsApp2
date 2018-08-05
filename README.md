@@ -28,7 +28,7 @@ xml/settings_main.xml</br>
 menu/main.xml</br>
 
 Structure of the code derives from the Earthquare application used in class:
-https://github.com/udacity/ud843-QuakeReport
+https://github.com/udacity/ud843-QuakeReport</br>
 
 
 ## Motivation
@@ -39,13 +39,13 @@ The purpose of the exercise is to create a "News app" with user preferences.
 
 ## Installation
 
-Project can be downloaded from GitHub:  https://github.com/hillc255/NewsApp2
+Project can be downloaded from GitHub:  
+https://github.com/hillc255/NewsApp2</br>
 
 ## API Reference
 
-Source of content comes from the open-source API for The Guardian. 
-
-https://open-platform.theguardian.com/documentation/
+Source of content comes from the open-source API for "The Guardian". 
+https://open-platform.theguardian.com/documentation/</br>
 
 ## Tests (Future consideration!)
 

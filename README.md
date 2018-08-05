@@ -24,7 +24,9 @@ The key features in the application are:  NewsActivity, News, NewsAdapter, NewsL
 Preference settings layout:  
 
 layout/settings_activity.xml 
+
 xml/settings_main.xml
+
 menu/main.xml
 
 Structure of the code derives from the Earthquare application used in class:
@@ -35,7 +37,7 @@ https://github.com/udacity/ud843-QuakeReport
 
 This is the seventh exercise in the "Grow with Google - Android Basic Development Nanodegree Scholarship 2018" program with Udacity.
 
-The purpose of the exercise is to create "News app" with user preferences.
+The purpose of the exercise is to create a "News app" with user preferences.
 
 ## Installation
 
@@ -44,6 +46,7 @@ Project can be downloaded from GitHub:  https://github.com/hillc255/NewsApp2
 ## API Reference
 
 Source of content comes from the open-source API for The Guardian. 
+https://open-platform.theguardian.com/documentation/
 
 ## Tests (Future consideration!)
 

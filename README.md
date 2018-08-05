@@ -14,7 +14,7 @@ The user can click on any news item in the list and read a web view of the story
  *Included in this application are user preference settings: BEGIN DATE for articles and ORDER BY oldest or newest.
 
 <p align="center">
- <kbd><img width="300" height="532" src="readme_assets/NewsApp2a.png"></kbd><kbd><img width="300" height="532" src="readme_assets/NewsApp2b.png"></kbd>
+ <kbd><img width="300" height="532" src="readme_assets/NewsApp2a.png"></kbd><kbd><img width="300" height="532" src="readme_assets/NewsApp2b.png"><img width="300" height="532" src="readme_assets/NewsApp2c.png"></kbd>
 </p>
 
 ## Code Description

@@ -28,7 +28,7 @@ layout/settings_activity.xml</br>
 xml/settings_main.xml</br>
 menu/main.xml</br>
 
-Structure of the code derives from the Earthquare application used in class:
+Structure of the code derives from the Earthquare application used in class:</vr>
 https://github.com/udacity/ud843-QuakeReport</br>
 
 
@@ -40,12 +40,12 @@ The purpose of the exercise is to create a "News app" with user preferences.
 
 ## Installation
 
-Project can be downloaded from GitHub:  
+Project can be downloaded from GitHub:</br>
 https://github.com/hillc255/NewsApp2</br>
 
 ## API Reference
 
-Source of content comes from the open-source API for "The Guardian". 
+Source of content comes from the open-source API for "The Guardian". </br>
 https://open-platform.theguardian.com/documentation/</br>
 
 ## Tests (Future consideration!)

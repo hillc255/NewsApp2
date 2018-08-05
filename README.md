@@ -28,7 +28,7 @@ layout/settings_activity.xml</br>
 xml/settings_main.xml</br>
 menu/main.xml</br>
 
-Structure of the code derives from the Earthquare application used in class:</vr>
+Structure of the code derives from the Earthquare application used in class:</br>
 https://github.com/udacity/ud843-QuakeReport</br>
 
 

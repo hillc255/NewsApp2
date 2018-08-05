@@ -25,6 +25,11 @@ import java.util.List;
  */
 public final class QueryUtils {
 
+    //Magic numbers added here
+    private static final int MAX_READ_TIMEOUT = 10000;
+    private static final int MAX_CONNECT_TIMEOUT = 15000;
+    private static final int SUCCESS_RESPONSE_CODE = 200;
+
     /**
      * Tag for the log messages
      */
@@ -87,14 +92,14 @@ public final class QueryUtils {
         InputStream inputStream = null;
         try {
             urlConnection = (HttpURLConnection) url.openConnection();
-            urlConnection.setReadTimeout(10000 /* milliseconds */);
-            urlConnection.setConnectTimeout(15000 /* milliseconds */);
+            urlConnection.setReadTimeout(MAX_READ_TIMEOUT /* milliseconds */);
+            urlConnection.setConnectTimeout(MAX_CONNECT_TIMEOUT /* milliseconds */);
             urlConnection.setRequestMethod("GET");
             urlConnection.connect();
 
             // If the request was successful (response code 200),
             // then read the input stream and parse the response.
-            if (urlConnection.getResponseCode() == 200) {
+            if (urlConnection.getResponseCode() == SUCCESS_RESPONSE_CODE) {
                 inputStream = urlConnection.getInputStream();
                 jsonResponse = readFromStream(inputStream);
             } else {

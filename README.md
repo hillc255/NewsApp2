@@ -44,6 +44,7 @@ Project can be downloaded from GitHub:  https://github.com/hillc255/NewsApp2
 ## API Reference
 
 Source of content comes from the open-source API for The Guardian. 
+
 https://open-platform.theguardian.com/documentation/
 
 ## Tests (Future consideration!)

@@ -23,11 +23,9 @@ The key features in the application are:  NewsActivity, News, NewsAdapter, NewsL
 
 Preference settings layout:  
 
-layout/settings_activity.xml 
-
-xml/settings_main.xml
-
-menu/main.xml
+<p>layout/settings_activity.xml</p>
+<p>xml/settings_main.xml</p>
+<p>menu/main.xml</p>
 
 Structure of the code derives from the Earthquare application used in class:
 https://github.com/udacity/ud843-QuakeReport
